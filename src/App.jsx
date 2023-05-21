@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Events from './components/Events';
+import EventDescription from './components/EventDescription';
 
 function App() {
 
@@ -23,11 +24,13 @@ function App() {
           <div className='flex flex-col gap-7 items-center'>
             <Link to='/' onClick={()=> setVisible(false)}>Home</Link>
             <Link to='/events' onClick={()=> setVisible(false)}>Events</Link>
+            <Link to='/eventdetails' onClick={()=> setVisible(false)}>Event Details</Link>
           </div>
         </Sidebar>
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/events' element={<Events/>} />
+          <Route path='/eventdetails' element={<EventDescription/>} />
         </Routes>
         <Footer />
       </BrowserRouter>

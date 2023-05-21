@@ -10,6 +10,7 @@ const Header = ({setVisible}) => {
             <div className="hidden sm:flex sm:gap-11">
                 <Link to='/' className="hover:underline underline-offset-4">Home</Link>
                 <Link to='/events' className="hover:underline underline-offset-4">Events</Link>
+                <Link to='/eventdetails' className="hover:underline underline-offset-4">Event Details</Link>
             </div>
         </div>
     );
