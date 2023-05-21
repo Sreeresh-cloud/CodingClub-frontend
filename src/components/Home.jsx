@@ -37,7 +37,7 @@ const Home = () => {
                     <div className='text-4xl font-black mb-7'><span className='text-[#112EAF]'>{'<'}</span>About Us<span className='text-[#112EAF]'>{'>'}</span></div>
                     <p className='font-montserrat'><span className='text-[#112EAF] font-bold'>Coding club TKMCE</span> is an initiative to inculcate the culture of programming and development in our institute. We create a platform which allows students to gain assistance and mentorship to enhance their coding ability. We ensure that every student here at TKMCE should have an opportunity to learn how to code and develop a passion for it. Our aim is to impart and instill this culture of learning-by-practice among students and professionals alike, and to that end, our team organizes a multitude of events throughout the year.</p>
                 </div>
-                <div className='min-h-screen flex flex-col justify-center items-center text-center px-7 py-14'>
+                <div className='min-h-screen flex flex-col justify-center items-center text-center px-7 py-24 pb-32'>
                     <div className='text-4xl font-black mb-7'><span className='text-[#E5245A]'>{'<'}</span>Vision<span className='text-[#E5245A]'>{'>'}</span></div>
                     <p className='font-montserrat'>To inculcate the culture of programming and development among students and to enhance their coding ability.</p>
                     <img src={VisionPic2} className='h-64'></img>
@@ -45,7 +45,7 @@ const Home = () => {
                     <p className='font-montserrat'>To create a platform to impart and instil this culture of learning-by-practice among students and professionals alike, and to that end, our team organizes a multitude of events throughout the year.</p>
                 </div>
             </div>
-            <div>Illustrations by <a className='hover:underline underline-offset-4' href="https://storyset.com/">Storyset</a></div>
+            <div className='text-[0.6rem] px-7 text-center'>Illustrations by <a className='hover:underline underline-offset-4' href="https://storyset.com/" target='_blank'>Storyset</a></div>
         </div>
     );
 };
