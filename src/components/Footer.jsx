@@ -5,7 +5,7 @@ const Footer = () => {
     return(
         <div className='flex flex-col sm:flex-row sm:justify-center items-center sm:gap-28 px-7 relative pb-24'>
             <img src={Logo} className='h-40 sm:h-64'></img>
-            <div className='flex gap-10 sm:gap-28'>
+            <div className='flex gap-10 sm:gap-28 max-[640px]:text-center'>
                 <div className='flex flex-col gap-2 sm:gap-7'>
                     <a href="#" className="hover:opacity-70">Home</a>
                     <a href="#" className="hover:opacity-70">Events</a>
