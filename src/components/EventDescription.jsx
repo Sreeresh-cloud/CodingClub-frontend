@@ -11,7 +11,7 @@ const EventDescription = () => {
                 <div className='font-montserrat'><span className='font-black text-[#F4002C]'>Mode:</span> Offline</div>
                 <div className='font-montserrat'><span className='pi pi-map-marker text-[#F4002C]'></span><span className='font-black text-[#F4002C]'> Venue:</span> TKM College of Engineering</div>
             </div>
-            <div className='font-montserrat flex flex-col gap-7 sm:flex-row sm:my-14 sm:gap-48'>
+            <div className='font-montserrat flex flex-col gap-7 sm:flex-row sm:my-14 min-[840px]:gap-48'>
                 <div className='text-center sm:text-left sm:w-1/2'>
                     <div className='text-xl sm:text-2xl font-black my-4 sm:my-0'>About the Event</div>
                     <div className='text-sm sm:text-base'>The computer basics workshop was designed to provide participants with a comprehensive understanding of the fundamental principles of using a computer. The workshop began with an overview of the operating system and its interface, which covered the essential components of a computer such as the CPU, keyboard, and mouse. Participants were introduced to basic file management and storage concepts</div>

@@ -15,20 +15,20 @@ const Home = () => {
                 </div>
             </div>
             <div className='relative hidden sm:block'>
-                <img src={AboutUsPic} className='absolute right-0 z-10 h-[55%]'></img>
+                <img src={AboutUsPic} className='absolute right-0 z-10 h-[55%] hidden xl:block'></img>
                 <div className='about-us h-[120vh] bg-gradient-to-r from-white to-slate-300 text-black relative'>
-                    <div className='absolute top-32 left-9 w-[35%]'>
+                    <div className='absolute top-32 min-[1000px]:max-xl:top-60 left-9 w-[65%] xl:w-[35%]'>
                         <div className='text-4xl sm:text-5xl font-black'><span className='text-[#112EAF]'>{'<'}</span>About Us<span className='text-[#112EAF]'>{'>'}</span></div>
                         <p className='font-montserrat text-xl 2xl:text-2xl mt-7'><span className='text-[#112EAF] font-bold'>Coding club TKMCE</span> is an initiative to inculcate the culture of programming and development in our institute. We create a platform which allows students to gain assistance and mentorship to enhance their coding ability. We ensure that every student here at TKMCE should have an opportunity to learn how to code and develop a passion for it. Our aim is to impart and instill this culture of learning-by-practice among students and professionals alike, and to that end, our team organizes a multitude of events throughout the year.</p>
                     </div>
                 </div>
                 <div className='h-screen'></div>
-                <img src={VisionPic} className='absolute bottom-[14%] left-0 h-[35%]'></img>
-                <div className='absolute w-[35%] left-[35%] bottom-[35%]'>
+                <img src={VisionPic} className='absolute bottom-[14%] left-0 h-[35%] hidden xl:block'></img>
+                <div className='absolute w-[35%] left-[5%] xl:left-[35%] bottom-[35%]'>
                     <div className='text-5xl font-black'>Vision<span className='text-[#E5245A]'>{'>'}</span></div>
                     <p className='font-montserrat text-xl 2xl:text-2xl mt-7'>To inculcate the culture of programming and development among students and to enhance their coding ability.</p>
                 </div>
-                <div className='absolute w-[35%] text-right right-[4%] bottom-[16%]'>
+                <div className='absolute w-[35%] text-right right-[10%] min-[840px]:right-[5%] bottom-[16%]'>
                     <div className='text-5xl font-black'><span className='text-[#E5245A]'>{'<'}</span>Mission</div>
                     <p className='font-montserrat text-xl 2xl:text-2xl mt-7'>To create a platform to impart and instil this culture of learning-by-practice among students and professionals alike, and to that end, our team organizes a multitude of events throughout the year.</p>
                 </div>
