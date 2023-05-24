@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import Events from './components/Events';
 import EventDescription from './components/EventDescription';
-
+import Web from './components/Web';
 function App() {
 
   const [visible,setVisible] = useState(false);
@@ -25,12 +25,14 @@ function App() {
             <Link to='/' onClick={()=> setVisible(false)}>Home</Link>
             <Link to='/events' onClick={()=> setVisible(false)}>Events</Link>
             <Link to='/eventdetails' onClick={()=> setVisible(false)}>Event Details</Link>
+            <Link to='/web' onClick={()=> setVisible(false)}>Team</Link>
           </div>
         </Sidebar>
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/events' element={<Events/>} />
           <Route path='/eventdetails' element={<EventDescription/>} />
+          <Route path='/web' element={<Web/>} />
         </Routes>
         <Footer />
       </BrowserRouter>
