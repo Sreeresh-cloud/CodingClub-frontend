@@ -8,7 +8,21 @@ const Execom = () => {
                 <div className="font-black text-4xl sm:text-6xl">EXECOM</div>
                 <div className="flex-auto border-b-4 mb-2 ml-2"></div>
             </div>
-            <ExecomCard/>
+            <div className="flex justify-center">
+                <div className="grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 w-full md:w-3/4 md:gap-y-16">
+                    <ExecomCard/>
+                    <ExecomCard/>
+                    <ExecomCard/>
+                    <ExecomCard/>
+                    <ExecomCard/>
+                    <ExecomCard/>
+                    <ExecomCard/>
+                    <ExecomCard/>
+                    <ExecomCard/>
+                    <ExecomCard/>
+                    <ExecomCard/>
+                </div>
+            </div>
         </div>
     );
 };
