@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import Events from './components/Events';
 import EventDescription from './components/EventDescription';
+import Execom from './components/Execom';
 
 function App() {
 
@@ -25,12 +26,14 @@ function App() {
             <Link to='/' onClick={()=> setVisible(false)}>Home</Link>
             <Link to='/events' onClick={()=> setVisible(false)}>Events</Link>
             <Link to='/eventdetails' onClick={()=> setVisible(false)}>Event Details</Link>
+            <Link to='/execom' onClick={() => setVisible(false)}>Execom</Link>
           </div>
         </Sidebar>
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/events' element={<Events/>} />
           <Route path='/eventdetails' element={<EventDescription/>} />
+          <Route path='/execom' element={<Execom/>} />
         </Routes>
         <Footer />
       </BrowserRouter>
