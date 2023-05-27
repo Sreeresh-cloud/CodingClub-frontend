@@ -11,7 +11,8 @@ const Header = ({setVisible}) => {
                 <Link to='/' className="hover:underline underline-offset-4">Home</Link>
                 <Link to='/events' className="hover:underline underline-offset-4">Events</Link>
                 <Link to='/eventdetails' className="hover:underline underline-offset-4">Event Details</Link>
-                <Link to='/execom' className="hover:underline underline-offset-4">Execom</Link>
+                 <Link to='/execom' className="hover:underline underline-offset-4">Execom</Link>
+                <Link to='/web' className="hover:underline underline-offset-4">Team</Link>
             </div>
         </div>
     );
