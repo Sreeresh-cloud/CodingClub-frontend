@@ -28,7 +28,7 @@ function App() {
             <Link to='/events' onClick={()=> setVisible(false)}>Events</Link>
             <Link to='/eventdetails' onClick={()=> setVisible(false)}>Event Details</Link>
             <Link to='/execom' onClick={() => setVisible(false)}>Execom</Link>
-            <Link to='/web' onClick={()=> setVisible(false)}>Team</Link>
+            <Link to='/web' onClick={()=> setVisible(false)}>Web Team</Link>
           </div>
         </Sidebar>
         <Routes>
