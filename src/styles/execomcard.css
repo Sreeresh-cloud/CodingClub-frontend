@@ -1,0 +1,8 @@
+.card-icon {
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    transition: all 0.4s ease-out;
+}
+
+.card-image:hover .card-icon {
+    transform: translateY(-100%);
+}
