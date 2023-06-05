@@ -11,12 +11,12 @@ const Home = () => {
             <div className="flex flex-col justify-center items-center h-screen pb-44 sm:pb-32">
                 <div className='relative'>
                     <div className='absolute top-1/4 left-1/2 translate-x-[-50%] w-max text-4xl sm:text-6xl'>Welcome to</div>
-                    <img src={Logo} alt='logo' className='h-80 sm:h-[70vh]'></img>
+                    <img src={Logo} alt='logo' className='h-80 sm:h-[34rem]'></img>
                 </div>
             </div>
             <div className='relative hidden sm:block'>
                 <img src={AboutUsPic} className='absolute right-0 z-10 h-[55%] hidden xl:block'></img>
-                <div className='about-us h-[120vh] bg-gradient-to-r from-white to-slate-300 text-black relative'>
+                <div className='about-us h-[58rem] bg-gradient-to-r from-white to-slate-300 text-black relative'>
                     <div className='absolute top-32 min-[1000px]:max-xl:top-60 left-9 w-[65%] xl:w-[35%]'>
                         <div className='text-4xl sm:text-5xl font-black'><span className='text-[#112EAF]'>{'<'}</span>About Us<span className='text-[#112EAF]'>{'>'}</span></div>
                         <p className='font-montserrat text-xl 2xl:text-2xl mt-7'><span className='text-[#112EAF] font-bold'>Coding club TKMCE</span> is an initiative to inculcate the culture of programming and development in our institute. We create a platform which allows students to gain assistance and mentorship to enhance their coding ability. We ensure that every student here at TKMCE should have an opportunity to learn how to code and develop a passion for it. Our aim is to impart and instill this culture of learning-by-practice among students and professionals alike, and to that end, our team organizes a multitude of events throughout the year.</p>
