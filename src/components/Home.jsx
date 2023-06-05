@@ -53,3 +53,5 @@ const Home = () => {
 };
 
 export default Home;
+
+//h-[58rem] should work for about us
