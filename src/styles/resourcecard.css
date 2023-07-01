@@ -1,0 +1,4 @@
+.card-icon {
+    clip-path: circle(45.2% at 96% 85%);
+    transition: all 0.4s ease-out;
+}
