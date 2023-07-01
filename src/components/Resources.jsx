@@ -42,6 +42,10 @@ const Resources = () => {
         className="bg-black flex justify-center border-none text-white"
       />
       <ResourceCard />
+      <ResourceCard />
+      <ResourceCard />
+      <ResourceCard />
+      <ResourceCard />
     </div>
   );
 };
