@@ -13,7 +13,7 @@ const ResourceCard = () => {
         <div className="relative bg-[#E5245A]  text-white md:w-1/8 md:px-8 md:py-6 md:mr-2 rounded-md group">
           <h1 className="text-2xl md:text-4xl font-bold mb-2">JavaScript Learning Pack</h1>
           <h2 className="text-xl md:text-2xl font-bold mb-2">Coding Club TKMCE</h2>
-          <p className="text-sm md:mt-10 md:text-xl mb-8">
+          <p className="text-sm md:mt-10 md:text-xl mb-10">
             An extensive collection of the best JavaScript Learning Materials for you to start your JS Journey.
           </p>
           <div className="hidden md:block absolute text-xs md:text-sm left-0 bottom-10 md:left-20 md:bottom-4 bg-[#112EAF] px-2 py-1 rounded-2xl hover:bg-black transition-colors">
