@@ -1,4 +1,10 @@
-.card-icon {
-    clip-path: circle(45.2% at 96% 85%);
+@media (min-width: 640px) { 
+    .card-icon {
+    clip-path: circle(60.1% at 100% 100%);
     transition: all 0.4s ease-out;
-}
+}}
+@media (min-width: 768px) {
+    .card-icon {
+    clip-path: circle(30.1% at 100% 100%);
+    transition: all 0.4s ease-out;
+}}

@@ -1,35 +1,17 @@
 import ResourceCard from "./ResourceCard";
-import { Menubar } from 'primereact/menubar';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const Resources = () => {
-    const items = [
-        {
-          label: 'All',
-          command: () => {
-          }
-        },
-        {
-          label: 'Web Development',
-          command: () => {
-          }
-        },
-        {
-          label: 'ML/AI',
-          command: () => {
-          }
-        },
-        {
-          label: 'CyberSecurity',
-          command: () => {
-          }
-        },
-        {
-            label: 'App Development',
-            command: () => {
-            }
-          }
-      ];
-
+  const items = [
+    'All',
+    'Web Development',
+    'AI/ML',
+    'Cyber Security',
+    'App Development'
+    // Add more items as needed
+  ];
+  
 
   return (
     <div className="flex-auto p-7 mb-7 sm:mb-20 sm:px-14 gap-4">
@@ -37,13 +19,13 @@ const Resources = () => {
         <div className="font-black text-4xl sm:text-6xl">RESOURCES</div>
         <div className="flex-auto border-b-4 mb-2 ml-2"></div>
       </div>
-      <Menubar
-        model={items}
-        className="bg-black flex justify-center border-none text-white"
-      />
-      <ResourceCard />
-      <ResourceCard />
-      <ResourceCard />
+      <Carousel>
+          {items.map((item, index) => (
+            <div key={index} className="p-8 bg-black text-white">
+              {item}
+            </div>
+          ))}
+        </Carousel>
       <ResourceCard />
       <ResourceCard />
     </div>
