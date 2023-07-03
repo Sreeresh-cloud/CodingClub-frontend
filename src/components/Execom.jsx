@@ -10,7 +10,8 @@ import Anand from '../assets/images/img8.jpg'
 import Sreehari from '../assets/images/img9.jpg'
 import Placeholder from '../assets/placeholder-image-execom.svg'
 import { Carousel } from 'primereact/carousel';
-        
+import '../styles/execom.css';
+
 const Execom = () => {
 
     const [imgList,setImgList] = useState(
@@ -83,8 +84,6 @@ const Execom = () => {
             },
         ]
     );
-    //additions
-    //************* 
     const [items,setItems] = useState([
         {
             id:0,
@@ -120,12 +119,12 @@ const Execom = () => {
 
     const itemTemplate = (item) => {
         return(
-          <div onClick={()=> setCurrentYear(item.title)}>
+          <div className={`flex justify-center hover:text-[#E5245A] hover:cursor-pointer text-xl md:text-2xl font-bold underline-offset-8 decoration-4 ${item.title === currentYear ? "underline text-[#E5245A]":""}`}  
+            onClick={()=> setCurrentYear(item.title)}>
             {item.title}
           </div>
         );
     }
-    //additions till here
     const renderedCards = imgList.map(item => (
         <ExecomCard key={item.id} item={item}/>
     ));
@@ -136,12 +135,12 @@ const Execom = () => {
                 <div className="font-black text-4xl sm:text-6xl">EXECOM</div>
                 <div className="flex-auto border-b-4 mb-2 ml-2"></div>
             </div>
-            //additions
-            <Carousel value={items} numScroll={1} numVisible={5} responsiveOptions={responsiveOptions} itemTemplate={itemTemplate}/>
-            <div>
+            <div className="flex justify-center">
+                <Carousel value={items} numScroll={1} numVisible={5} responsiveOptions={responsiveOptions} itemTemplate={itemTemplate} className="w-full xl:w-[70%]"/>
+            </div>
+            <div className="mb-16">
                 Current year: {currentYear}
             </div>
-            //additions
             <div className="flex justify-center">
                 <div className="grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 w-full md:w-[85%] xl:w-[90%] 2xl:w-3/4 md:gap-y-16">
                     {renderedCards}
