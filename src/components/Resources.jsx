@@ -19,15 +19,17 @@ const Resources = () => {
         <div className="font-black text-4xl sm:text-6xl">RESOURCES</div>
         <div className="flex-auto border-b-4 mb-2 ml-2"></div>
       </div>
-      <Carousel>
+      <Carousel showStatus={false} className="mr-16 ml-16 md:mr-64 md:ml-64">
           {items.map((item, index) => (
-            <div key={index} className="p-8 bg-black text-white">
+            <div key={index} className="p-8 bg-black text-white ">
               {item}
             </div>
           ))}
         </Carousel>
-      <ResourceCard />
-      <ResourceCard />
+            <div className="flex flex-col gap-4">
+                <ResourceCard />
+                <ResourceCard />
+            </div>
     </div>
   );
 };
