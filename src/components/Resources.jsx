@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ResourceCard from "./ResourceCard";
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -11,6 +12,31 @@ const Resources = () => {
     'App Development'
     // Add more items as needed
   ];
+  const [List,setList] = useState(
+    [
+      {
+        id:0,
+        name:'Javascript Learning Pack',
+        descp:'An extensive collection of the best JavaScript Learning Materials for you to start your JS Journey.',
+        section:"Web Development"
+      },
+      {
+        id: 1,
+        name: 'App Development Crash Course',
+        descp: 'A comprehensive crash course on web development covering Flutter and Firebase.',
+        section:"App Development"
+      },
+      {
+        id: 2,
+        name: 'Machine Learning Basics',
+        descp: 'Learn the fundamental concepts of machine learning and explore various algorithms.',
+        section:"AI/ML"
+      }
+    ]
+  )
+  const renderedCards = List.map(item => (
+    <ResourceCard  key={item.id} item={item}/>
+));
   
 
   return (
@@ -27,11 +53,10 @@ const Resources = () => {
           ))}
         </Carousel>
             <div className="flex flex-col gap-4">
-                <ResourceCard />
-                <ResourceCard />
+                  {renderedCards}
             </div>
     </div>
-  );
+  );  
 };
 
 export default Resources;
