@@ -10,7 +10,6 @@ const Resources = () => {
     { section: 'AI/ML', category: 'AI/ML' },
     { section: 'Cyber Security', category: 'Cyber Security' },
     { section: 'App Development', category: 'App Development' }
-    // Add more sections as needed
   ];
 
   const allResources = [
@@ -76,11 +75,16 @@ const Resources = () => {
         ))}
       </Carousel>
       <div className="flex flex-col gap-4">
-        {renderedCards.length > 0 ? (
-          renderedCards
-        ) : (
-          <div className="text-center text-xl font-bold">No resources found</div>
-        )}
+        {
+          renderedCards.length > 0 ? 
+          (
+            renderedCards
+          ) 
+          : 
+          (
+            <div className="text-center text-xl">No resources found</div>
+          )
+        }
       </div>
     </div>
   );
