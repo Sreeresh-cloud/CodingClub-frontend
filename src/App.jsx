@@ -14,6 +14,7 @@ import EventDescription from './components/EventDescription';
 import Execom from './components/Execom';
 import Web from './components/Web';
 import Resources from './components/Resources';
+import Contacts from './components/Contacts';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
             <Link to='/resources' onClick={()=> setVisible(false)}>Resources</Link>
             <Link to='/execom' onClick={() => setVisible(false)}>Execom</Link>
             <Link to='/web' onClick={()=> setVisible(false)}>Web</Link>
+            <Link to='/contatcs' onClick={()=> setVisible(false)}>Contact</Link>
           </div>
         </Sidebar>
         <Routes>
@@ -40,6 +42,7 @@ function App() {
           <Route path='/execom' element={<Execom/>} />
           <Route path='/web' element={<Web/>} />
           <Route path='/resources' element={<Resources/>} />
+          <Route path='/contacts' element={<Contacts/>} />
         </Routes>
         <Footer />
       </BrowserRouter>
