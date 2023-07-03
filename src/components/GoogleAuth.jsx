@@ -1,6 +1,7 @@
-import { GoogleLogin, useGoogleLogin } from "@react-oauth/google";
+import { GoogleLogin, useGoogleLogin, googleLogout } from "@react-oauth/google";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [user, setUser] = useState([]);
@@ -37,9 +38,23 @@ export default function Login() {
     onError: (error) => console.log("Login Failed:", error),
   });
 
-  return (
-    <div>
-      <button onClick={() => login()}>Sign in with Google 🚀 </button>
-    </div>
-  );
+  const logout = () => {
+    googleLogout();
+    setProfile(null);
+  };
+  if (!profile.name) {
+    return (
+      <div className="bg-white text-black px-3 rounded">
+        <button onClick={() => login()}>LogIn</button>
+      </div>
+    );
+  } else {
+    return (
+      <div >
+        <Link to={"/profile"}>
+          <img className="w-16 rounded-full" src={profile.picture} />
+        </Link>
+      </div>
+    );
+  }
 }

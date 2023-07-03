@@ -13,7 +13,6 @@ const Home = () => {
       <div className="flex flex-col justify-center items-center h-screen pb-44 sm:pb-32">
         <div className="relative">
           <div className="absolute top-1/4 left-1/2 translate-x-[-50%] w-max text-4xl sm:text-6xl">
-            <Login/>
             Welcome to
           </div>
           <img src={Logo} alt="logo" className="h-80 sm:h-[70vh]"></img>
