@@ -1,3 +1,5 @@
+import "../styles/contacts.css";
+
 const Contacts = () => {
     
     return ( 
@@ -17,19 +19,20 @@ const Contacts = () => {
             <div className="mail bg-[#E5245A] rounded-xl pt-6 col-start-1 row-start-3 col-span-1 row-span-2">
                 <div className="mb-7">
                     <h3 className='text-xl md:text-2xl pt-3 font-bold'>Email</h3>
-                    <p className='text-xs md:text-lg pt-1 font-montserrat'>codingclub@tkmce.ac.in</p>
+                    <p className='box1 text-xs md:text-lg pt-1 font-montserrat'>codingclub@tkmce.ac.in</p>
                 </div>
             </div>
             <div className="phno  bg-[#E5245A] rounded-xl pt-6 col-start-2 row-start-3 col-span-1 row-span-2">
-              <h3 className='text-xl md:text-2xl pt-3 font-bold'>Phone Number</h3>
+              <h3 className='text-xl md:text-2xl pt-2 font-bold'>Phone Number</h3>
               <p className='text-xs md:text-lg pt-1 font-montserrat'>+91 9061152964</p>
             </div>
             <div className="social bg-[#112EAF] rounded-xl col-start-1 row-start-5 col-span-2 row-span-1">
-           <a href='https://instagram.com/codingclub_tkmce'><i className="pi pi-spin pi-instagram p-5" style={{ fontSize: '1.5em' }}></i></a>
-            <a href='https://twitter.com/Codingclubtkmce'><i className="pi pi-spin pi-twitter p-5" style={{ fontSize: '1.5em' }}></i></a>
+            <a href='https://instagram.com/codingclub_tkmce'><i className="pi pi-instagram p-5 hover:text-blue-950 transition-all duration-300 ease-out" style={{ fontSize: '1.5em' }}></i></a>
+            <a href='https://twitter.com/Codingclubtkmce'><i className="pi pi-twitter p-5 hover:text-blue-950 transition-all duration-300 ease-out" style={{ fontSize: '1.5em' }}></i></a>
+            <a href='https://www.linkedin.com/company/codingclub-tkmce/'><i className="pi pi-linkedin  p-5 hover:text-blue-950 transition-all duration-300 ease-out" style={{ fontSize: '1.5em' }}></i></a>
             </div>
              <div className="Map  hidden md:block pr-2.5 col-start-3 row-start-1 col-span-2 row-span-5">
-             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.6269990306782!2d76.63195209999999!3d8.9142251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05fd3036020df5%3A0xc3c1007e5232dc27!2sTKM%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1688287723111!5m2!1sen!2sin" className='rounded-xl w-full'
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.6269990306782!2d76.63195209999999!3d8.9142251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05fd3036020df5%3A0xc3c1007e5232dc27!2sTKM%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1688287723111!5m2!1sen!2sin" className='rounded-xl h-full w-full'
               height="375" 
              style={{border:"0" }}
              allowfullscreen="" 
