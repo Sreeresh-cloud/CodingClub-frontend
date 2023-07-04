@@ -11,9 +11,10 @@
   },
   "dependencies": {
     "primeicons": "^6.0.1",
-    "primereact": "^9.4.0",
+    "primereact": "^9.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.11.2"
   },
   "devDependencies": {
