@@ -19,7 +19,7 @@ const ResourceCard = ({item}) => {
           <div className="hidden md:block absolute text-xs md:text-sm left-0 bottom-10 md:left-8 md:bottom-4 bg-[#112EAF] px-2 py-1 rounded-2xl hover:bg-black transition-colors">
             {item.category}
           </div>
-          <div className="card-icon absolute h-1/3 w-1/3 bg-black bottom-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 inline-block">
+          <div className="card-icon-res absolute h-1/3 w-1/3 bg-black bottom-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 inline-block">
             <div className="relative h-full w-full">
               <span className="absolute pi pi-arrow-down-right text-xl md:text-4xl bottom-0 right-0  md:bottom-2 md:right-2 text-4xl hover:text-[#112EAF] transition-all duration-300 ease-out"></span>
             </div>
