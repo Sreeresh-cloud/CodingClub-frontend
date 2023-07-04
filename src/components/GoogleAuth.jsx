@@ -7,9 +7,9 @@ export default function Login() {
   const [user, setUser] = useState([]);
   const [profile, setProfile] = useState([]);
 
-  useEffect(() => {
-    profileMe();
-  }, [user]);
+  // useEffect(() => {
+  //   profileMe();
+  // }, [user]);
   // async function profileMe() {
   //   if (user) {
   //     await axios

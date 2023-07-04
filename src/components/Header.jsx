@@ -4,10 +4,8 @@ import Login from "./GoogleAuth";
 
 const Header = ({ setVisible }) => {
   return (
-    <div className="flex h-20 xl:h-28 items-center px-6 xl:px-14 ">
-      <Link to={"/"} className="h-full mr-auto">
-        <img src={Logo} className="h-full mr-auto" alt="logo"></img>
-      </Link>
+    <div className="flex h-20 xl:h-28 items-center px-6 xl:px-14">
+      <img src={Logo} className="h-full mr-auto" alt="logo"></img>
       <button className="sm:hidden" onClick={() => setVisible(true)}>
         <span className="pi pi-bars"></span>
       </button>
@@ -21,11 +19,17 @@ const Header = ({ setVisible }) => {
         <Link to="/eventdetails" className="hover:underline underline-offset-4">
           Event Details
         </Link>
+        <Link to="/resources" className="hover:underline underline-offset-4">
+          Resources
+        </Link>
         <Link to="/execom" className="hover:underline underline-offset-4">
           Execom
         </Link>
         <Link to="/web" className="hover:underline underline-offset-4">
           Web Team
+        </Link>
+        <Link to="/contacts" className="hover:underline underline-offset-4">
+          Contact
         </Link>
       </div>
       <div className="ml-6">

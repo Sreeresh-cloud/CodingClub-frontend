@@ -15,6 +15,8 @@ import Execom from "./components/Execom";
 import Web from "./components/Web";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import Login from "./components/GoogleAuth";
+import Resources from './components/Resources';
+import Contacts from './components/Contacts';
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -39,11 +41,13 @@ function App() {
               <Link to="/eventdetails" onClick={() => setVisible(false)}>
                 Event Details
               </Link>
+            <Link to='/resources' onClick={()=> setVisible(false)}>Resources</Link>
               <Link to="/execom" onClick={() => setVisible(false)}>
                 Execom
               </Link>
               <Link to="/web" onClick={() => setVisible(false)}>
-                Web Team
+                Web</Link>
+            <Link to='/contatcs' onClick={()=> setVisible(false)}>Contact
               </Link>
               
             </div>
@@ -54,6 +58,8 @@ function App() {
             <Route path="/eventdetails" element={<EventDescription />} />
             <Route path="/execom" element={<Execom />} />
             <Route path="/web" element={<Web />} />
+          <Route path='/resources' element={<Resources/>} />
+          <Route path='/contacts' element={<Contacts/>} />
           </Routes>
           <Footer />
         </BrowserRouter>
