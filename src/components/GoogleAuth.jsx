@@ -13,16 +13,10 @@ export default function Login() {
   async function profileMe() {
     if (user) {
       await axios
-        .get(
-          "https://www.googleapis.com/oauth2/v1/userinfo?access_token=" +
-            user.access_token,
-          {
-            headers: {
-              Authorization: `Bearer ${user.access_token}`,
-              Accept: "application/json",
-            },
-          }
-        )
+        .post("https://backend.codingclubtkmce.tech/users/google/", {
+          access_token: user.access_token,
+          code: "200",
+        })
         .then((res) => {
           setProfile(res.data);
           console.log(profile);
@@ -50,10 +44,8 @@ export default function Login() {
     );
   } else {
     return (
-      <div >
-        <Link to={"/profile"}>
-          <img className="w-16 rounded-full" src={profile.picture} />
-        </Link>
+      <div>
+        <Link to={"/profile"}>Profile</Link>
       </div>
     );
   }
