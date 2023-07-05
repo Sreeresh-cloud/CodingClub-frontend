@@ -1,9 +1,10 @@
-import Logo from '../assets/coding club dp copy 2.svg'
-import '../styles/home.css'
-import AboutUsPic from '../assets/Code typing-bro (1) 1.svg'
-import VisionPic from '../assets/To the stars-rafiki (1).svg'
-import AboutUsPic2 from '../assets/Code typing-bro.svg'
-import VisionPic2 from '../assets/To the stars-rafiki(2).svg'
+import Logo from "../assets/coding club dp copy 2.svg";
+import "../styles/home.css";
+import AboutUsPic from "../assets/Code typing-bro (1) 1.svg";
+import VisionPic from "../assets/To the stars-rafiki (1).svg";
+import AboutUsPic2 from "../assets/Code typing-bro.svg";
+import VisionPic2 from "../assets/To the stars-rafiki(2).svg";
+import Login from "./GoogleAuth";
 
 const Home = () => {
     return(

@@ -36,7 +36,7 @@ const Contacts = () => {
                     className='rounded-xl h-full w-full' 
                     height="375" 
                     style={{border:"0" }}
-                    allowfullscreen="" 
+                    allowFullScreen="" 
                     loading="lazy" 
                     referrerPolicy="no-referrer-when-downgrade">
                 </iframe>
