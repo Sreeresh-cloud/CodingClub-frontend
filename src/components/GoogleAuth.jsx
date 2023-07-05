@@ -7,22 +7,22 @@ export default function Login() {
   const [user, setUser] = useState([]);
   const [profile, setProfile] = useState([]);
 
-  // useEffect(() => {
-  //   profileMe();
-  // }, [user]);
-  // async function profileMe() {
-  //   if (user) {
-  //     await axios
-  //       .post("https://backend.codingclubtkmce.tech/users/google/", {
-  //         access_token: user.access_token,
-  //         code: "200",
-  //       })
-  //       .then((res) => {
-  //         setProfile(res.data);
-  //         console.log(profile);
-  //       });
-  //   }
-  // }
+  useEffect(() => {
+    profileMe();
+  }, [user]);
+  async function profileMe() {
+    if (user) {
+      await axios
+        .post("https://backend.codingclubtkmce.tech/users/google/", {
+          access_token: user.access_token,
+          code: "200",
+        })
+        .then((res) => {
+          // setProfile(res.data);
+          console.log(profile);
+        });
+    }
+  }
 
   const login = useGoogleLogin({
     onSuccess: (codeResponse) => {

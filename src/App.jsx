@@ -47,9 +47,8 @@ function App() {
               </Link>
               <Link to="/web" onClick={() => setVisible(false)}>
                 Web</Link>
-            <Link to='/contatcs' onClick={()=> setVisible(false)}>Contact
+            <Link to='/contacts' onClick={()=> setVisible(false)}>Contact
               </Link>
-              
             </div>
           </Sidebar>
           <Routes>
