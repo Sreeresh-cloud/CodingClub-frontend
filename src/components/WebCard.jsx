@@ -10,12 +10,12 @@ const WebCard = () => {
             </div>
             <div className='flex flex-row p-4 border-2 rounded-md border-[#112EAF] relative z-0 -mt-6'>
                 <div className='-ml-2'>
-                    <div className='xl:text-xl font-black text-left sm:text-md mt-3'>John Doe</div>
-                    <div className='xl:text-sm font-extrabold sm:text-sm '>Web Lead</div>
+                    <div className='text-xl font-black text-left sm:text-lg mt-3'>John Doe</div>
+                    <div className='text-sm font-extrabold sm:text-md '>Web Lead</div>
                 </div>
                 <div className="relative flex flex-wrap ml-auto hover:text-blue-950 ">
                     <div className="flex justify-center items-center w-16 bg-[#112EAF] box-border h-30 ml-auto rounded-r-sm sm:w-16 z-0 -mx-4 -mb-4" ></div>
-                    <div className="absolute justify-items-center pi pi-linkedin h-[35%] w-[35%] ml-[55%] mt-[65%]"></div>
+                    <div className="absolute justify-items-center pi pi-linkedin text-xl th-[35%] w-[35%] ml-[55%] mt-[65%] hover:text-blue-950 transition-all duration-300 ease-out"></div>
                 </div>
             </div>
         </div>
