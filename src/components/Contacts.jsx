@@ -35,7 +35,7 @@ const Contacts = () => {
              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.6269990306782!2d76.63195209999999!3d8.9142251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05fd3036020df5%3A0xc3c1007e5232dc27!2sTKM%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1688287723111!5m2!1sen!2sin" className='rounded-xl h-full w-full'
               height="375" 
              style={{border:"0" }}
-             allowfullscreen="" 
+             allowFullScreen="" 
              loading="lazy" 
              referrerPolicy="no-referrer-when-downgrade">
              </iframe>

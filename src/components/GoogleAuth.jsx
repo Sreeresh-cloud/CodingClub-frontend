@@ -19,7 +19,7 @@ export default function Login() {
         })
         .then((res) => {
           // setProfile(res.data);
-          console.log(profile);
+          console.log(res);
         });
     }
   }
