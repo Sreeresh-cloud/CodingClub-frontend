@@ -9,7 +9,7 @@ const Header = ({ setVisible }) => {
       <button className="sm:hidden" onClick={() => setVisible(true)}>
         <span className="pi pi-bars"></span>
       </button>
-      <div className="hidden sm:flex sm:gap-11">
+      <div className="hidden sm:flex text-xs md:gap-4 lg:text-base lg:gap-6 xl:gap-11">
         <Link to="/" className="hover:underline underline-offset-4">
           Home
         </Link>
@@ -31,8 +31,6 @@ const Header = ({ setVisible }) => {
         <Link to="/contacts" className="hover:underline underline-offset-4">
           Contact
         </Link>
-      </div>
-      <div className="ml-6">
         <Login />
       </div>
     </div>

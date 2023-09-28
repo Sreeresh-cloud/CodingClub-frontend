@@ -14,9 +14,9 @@ import EventDescription from "./components/EventDescription";
 import Execom from "./components/Execom";
 import Web from "./components/Web";
 import { GoogleOAuthProvider } from "@react-oauth/google";
-import Login from "./components/GoogleAuth";
 import Resources from './components/Resources';
 import Contacts from './components/Contacts';
+import Login from "./components/GoogleAuth";
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -45,6 +45,7 @@ function App() {
             <Link to='/execom' onClick={() => setVisible(false)}>Execom</Link>
             <Link to='/web' onClick={()=> setVisible(false)}>Web</Link>
             <Link to='/contacts' onClick={()=> setVisible(false)}>Contact</Link>
+            <Login/>
           </div>
         </Sidebar>
         <Routes>

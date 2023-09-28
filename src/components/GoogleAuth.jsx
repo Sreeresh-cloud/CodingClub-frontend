@@ -48,7 +48,7 @@ export default function Login() {
   // };
   // if (!profile.name) {
     return (
-      <div className="bg-white text-black px-3 rounded">
+      <div className="bg-white text-black px-3 rounded h-8 flex justify-center items-center">
         <button onClick={() => login()}>LogIn</button>
       </div>
     );
