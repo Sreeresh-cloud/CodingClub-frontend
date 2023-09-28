@@ -1,36 +1,23 @@
-import { useGoogleLogin, googleLogout } from "@react-oauth/google";
+import { useGoogleLogin } from "@react-oauth/google";
 import { userLogin } from "../apis/auth";
 import { get_profile } from "../apis/user";
+import { UserContext } from "../contexts/UserContext";
+import { useContext, useEffect } from "react";
 
 export default function Login() {
-  // const [user, setUser] = useState([]);
-  // const [profile, setProfile] = useState([]);
-
-  // useEffect(() => {
-  //   profileMe();
-  // }, [user]);
-  // async function profileMe() {
-  //   if (user) {
-  //     await axios
-  //       .post("https://backend.codingclubtkmce.tech/users/google/", {
-  //         access_token: user.access_token,
-  //         code: "200",
-  //       })
-  //       .then((res) => {
-  //         // setProfile(res.data);
-  //         console.log(res);
-  //       });
-  //   }
-  // }
+  const { tokenState, userState } = useContext(UserContext);
+  const [token, setToken] = tokenState;
+  const [userDetails, setUserDetails] = userState;
 
   const handleLogin = async(credentaialResponse) => {
     const response = await userLogin(credentaialResponse.access_token);
     if(response.status === 200) {
-      //set the token to the token context here
+      setToken(response.response.key);
       const profile_response = await get_profile(response.response.key);
-      console.log(profile_response);
-      //set profile to context
-      //set key to local storage
+      if(profile_response.status === 200) {
+        localStorage.setItem("CCUserToken",response.response.key);
+        setUserDetails({...profile_response.response});
+      }
     }
   };
 
@@ -39,21 +26,9 @@ export default function Login() {
     onError: (error) => console.log("Login Failed:", error),
   });
 
-  // const logout = () => {
-  //   googleLogout();
-  //   setProfile(null);
-  // };
-  // if (!profile.name) {
-    return (
-      <div className="bg-white text-black px-3 rounded h-8 flex justify-center items-center">
-        <button onClick={() => login()}>LogIn</button>
-      </div>
-    );
-  // } else {
-  //   return (
-  //     <div>
-  //       <Link to={"/profile"}>Profile</Link>
-  //     </div>
-  //   );
-  // }
+  return (
+    <div className="bg-white text-black px-3 rounded h-8 flex justify-center items-center">
+      <button onClick={() => login()}>LogIn</button>
+    </div>
+  );
 }

@@ -11,7 +11,6 @@ export async function userLogin(access_token) {
                 code:200
             }
         });
-        console.log(response);
         return {
             status: response.status,
             response: response.data
