@@ -1,7 +1,4 @@
-import { GoogleLogin, useGoogleLogin, googleLogout } from "@react-oauth/google";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
+import { useGoogleLogin, googleLogout } from "@react-oauth/google";
 import { userLogin } from "../apis/auth";
 import { get_profile } from "../apis/user";
 
