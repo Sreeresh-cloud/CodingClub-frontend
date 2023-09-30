@@ -16,6 +16,7 @@ import Web from "./components/Web";
 import Resources from './components/Resources';
 import Contacts from './components/Contacts';
 import Login from "./components/GoogleAuth";
+import ProfilePage from "./components/Profile";
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -54,6 +55,7 @@ function App() {
         <Route path='/web' element={<Web/>} />
         <Route path='/resources' element={<Resources/>} />
         <Route path='/contacts' element={<Contacts/>} />
+        <Route path="/profilepage" element={<ProfilePage/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>
