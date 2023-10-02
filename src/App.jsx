@@ -3,7 +3,7 @@ import "primeicons/primeicons.css";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
 import { Sidebar } from "primereact/sidebar";
-import { useState } from "react";
+import { useEffect, useState,useContext } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import { Link } from "react-router-dom";
@@ -16,9 +16,36 @@ import Web from "./components/Web";
 import Resources from './components/Resources';
 import Contacts from './components/Contacts';
 import Login from "./components/GoogleAuth";
+import { get_profile } from "./apis/user";
+import { UserContext } from "./contexts/UserContext";
 
 function App() {
+
   const [visible, setVisible] = useState(false);
+  const { tokenState, userState } = useContext(UserContext);
+  const [token, setToken] = tokenState;
+  const [userDetails, setUserDetails] = userState;
+
+  useEffect(() => {
+    (async () => {
+      const loggedInUserToken = localStorage.getItem('CCUserToken');
+      try {
+        if(loggedInUserToken.length > 0) {
+          const response = await get_profile(loggedInUserToken);
+          if(response.status === 200) {
+            setUserDetails({...response.response});
+            setToken(loggedInUserToken);
+          }
+          else {
+            localStorage.setItem('CCUserToken',"");
+          }
+        }
+      }
+      catch(err) {
+        console.log(err);
+      }
+    })();
+  },[]);
 
   return (
     <div className="min-h-screen flex flex-col bg-black text-white font-source">
