@@ -18,6 +18,7 @@ import Contacts from './components/Contacts';
 import Login from "./components/GoogleAuth";
 import { get_profile } from "./apis/user";
 import { UserContext } from "./contexts/UserContext";
+import Profile from "./components/Profile";
 
 function App() {
 
@@ -72,15 +73,16 @@ function App() {
           <Link to='/contacts' onClick={()=> setVisible(false)}>Contact</Link>
           <Login/>
         </div>
-      </Sidebar>
-      <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/events' element={<Events/>} />
-        <Route path='/eventdetails' element={<EventDescription/>} />
-        <Route path='/execom' element={<Execom/>} />
-        <Route path='/web' element={<Web/>} />
-        <Route path='/resources' element={<Resources/>} />
-        <Route path='/contacts' element={<Contacts/>} />
+        </Sidebar>
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/events' element={<Events/>} />
+          <Route path='/eventdetails' element={<EventDescription/>} />
+          <Route path='/execom' element={<Execom/>} />
+          <Route path='/web' element={<Web/>} />
+          <Route path='/resources' element={<Resources/>} />
+          <Route path='/contacts' element={<Contacts/>} />
+          <Route path='/profile' element={<Profile/>} />
         </Routes>
         <Footer />
       </BrowserRouter>
