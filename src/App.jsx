@@ -71,7 +71,12 @@ function App() {
           <Link to='/execom' onClick={() => setVisible(false)}>Execom</Link>
           <Link to='/web' onClick={()=> setVisible(false)}>Web</Link>
           <Link to='/contacts' onClick={()=> setVisible(false)}>Contact</Link>
+          {
+          (userDetails!==null && token?.length > 0) ?
+          <Link to='/profile' onClick={() => setVisible(false)}>Profile</Link>
+          :
           <Login/>
+          }
         </div>
         </Sidebar>
         <Routes>
