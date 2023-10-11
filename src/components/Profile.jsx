@@ -23,7 +23,7 @@ const ProfilePage = () => {
         <div className="col-span-1 sm:col-span-2 row-span-3 flex flex-col gap-4 md:gap-5">
           <div className="text-xl sm:text-4xl font-bold text-center sm:text-left">John Doe</div>
           <div className="text-lg sm:text-3xl text-center sm:text-left">sample@email.com</div>
-          <div className="hidden sm:block w-full border-b-2 sm:border-b-4 mt-2 ml-2"></div>
+          <div className="hidden sm:block w-full border-b-2 sm:border-b-4 mt-2 "></div>
           <div className="flex flex-col rounded-xl border border-[#E5245A]">
             <div className='mt-3 p-3 sm:p-5 font-bold text-xl sm:text-3xl text-center sm:text-left'>About</div>
             <div className='p-3 sm:p-5 flex flex-row text-lg sm:text-2xl'>
