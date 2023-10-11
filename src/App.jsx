@@ -16,6 +16,7 @@ import Web from "./components/Web";
 import Resources from './components/Resources';
 import Contacts from './components/Contacts';
 import Login from "./components/GoogleAuth";
+import EditCard from "./components/EditProfile";
 import ProfilePage from "./components/Profile";
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
           <Link to='/execom' onClick={() => setVisible(false)}>Execom</Link>
           <Link to='/web' onClick={()=> setVisible(false)}>Web</Link>
           <Link to='/contacts' onClick={()=> setVisible(false)}>Contact</Link>
+          <Link to="/edit" onClick={() => setVisible(false)}>Edit</Link>
           <Login/>
         </div>
       </Sidebar>
@@ -55,6 +57,7 @@ function App() {
         <Route path='/web' element={<Web/>} />
         <Route path='/resources' element={<Resources/>} />
         <Route path='/contacts' element={<Contacts/>} />
+        <Route path="/edit" element={<EditCard />} />
         <Route path="/profilepage" element={<ProfilePage/>}/>
         </Routes>
         <Footer />
