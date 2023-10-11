@@ -17,6 +17,8 @@ import Resources from './components/Resources';
 import Contacts from './components/Contacts';
 import Login from "./components/GoogleAuth";
 import EditCard from "./components/EditProfile";
+import ProfilePage from "./components/Profile";
+
 function App() {
   const [visible, setVisible] = useState(false);
 
@@ -56,6 +58,7 @@ function App() {
         <Route path='/resources' element={<Resources/>} />
         <Route path='/contacts' element={<Contacts/>} />
         <Route path="/edit" element={<EditCard />} />
+        <Route path="/profilepage" element={<ProfilePage/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>
