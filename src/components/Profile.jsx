@@ -1,5 +1,6 @@
 import React from 'react';
 import testDp from '../assets/images/img1.jpg';
+import { Link } from "react-router-dom";
 
 const ProfilePage = () => {
   return (
@@ -53,7 +54,9 @@ const ProfilePage = () => {
         </div>
         <div className="flex flex-col gap-5 md:flex-row md:justify-between md:gap-5">
           <div className="md:p-5 flex flex-row justify-center md:justify-start items-center md:items-end">
-            <button type="button" className="text-white w-[70%] sm:w-44 bg-[#E5245A] hover:bg-[#E5244A] focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-4 py-2 text-center">Edit</button>
+            <button type="button" className="text-white w-[70%] sm:w-44 bg-[#E5245A] hover:bg-[#E5244A] focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-4 py-2 text-center">
+              <Link to='/edit' onClick={()=> setVisible(false)}>Edit</Link>
+            </button>
           </div>
           <div className="md:p-5 flex flex-row justify-center md:justify-start items-center md:items-end">
             <button type="button" className="text-white w-[70%] sm:w-44 bg-[#E5245A] hover-bg-[#E5244A] focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-4 py-2 text-center">Logout</button>

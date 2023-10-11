@@ -1,4 +1,6 @@
 import Asher from "../assets/images/img1.jpg";
+import { Link } from "react-router-dom";
+
 const EditCard = () => {
   return (
     <div className="flex-auto p-7 mb-7 sm:mb-20 sm:px-14">
@@ -97,7 +99,7 @@ const EditCard = () => {
               </div>
               <div class="flex justify-end mt-6 mb-4">
               <button class="bg-black border-2 border-[#E5245A] text-white px-4 py-2 rounded-lg mr-4">Save</button>
-              <button class="bg-black border-2 border-[#E5245A] text-white px-4 py-2 rounded-lg ">Cancel</button>
+              <button class="bg-black border-2 border-[#E5245A] text-white px-4 py-2 rounded-lg "><Link to='/profilepage' onClick={()=> setVisible(false)}>Cancel</Link></button>
               </div>
             </div>
           </div>
