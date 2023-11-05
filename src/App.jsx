@@ -20,6 +20,7 @@ import { get_profile } from "./apis/user";
 import { UserContext } from "./contexts/UserContext";
 import Profile from "./components/Profile";
 import {Toast} from 'primereact/toast';
+import EditProfile from './components/EditProfile';
 
 function App() {
 
@@ -97,6 +98,7 @@ function App() {
           <Route path='/resources' element={<Resources/>} />
           <Route path='/contacts' element={<Contacts/>} />
           <Route path='/profile' element={<Profile/>} />
+          <Route path='edit_profile' element={<EditProfile/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>
