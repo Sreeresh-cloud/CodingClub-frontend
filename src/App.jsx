@@ -3,7 +3,7 @@ import "primeicons/primeicons.css";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
 import { Sidebar } from "primereact/sidebar";
-import { useEffect, useState,useContext } from "react";
+import { useEffect, useState,useContext,useRef } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import { Link } from "react-router-dom";
@@ -19,6 +19,7 @@ import Login from "./components/GoogleAuth";
 import { get_profile } from "./apis/user";
 import { UserContext } from "./contexts/UserContext";
 import Profile from "./components/Profile";
+import {Toast} from 'primereact/toast';
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
           if(response.status === 200) {
             setUserDetails({...response.response});
             setToken(loggedInUserToken);
+            showSuccess();
           }
           else {
             localStorage.setItem('CCUserToken',"");
@@ -48,8 +50,15 @@ function App() {
     })();
   },[]);
 
+  const toast = useRef(null);
+
+  const showSuccess = () => {
+    toast.current.show({severity:'success', summary: 'Success', detail:'Login Successful', life: 3000});
+  }
+
   return (
     <div className="min-h-screen flex flex-col bg-black text-white font-source">
+      <Toast ref={toast} position="bottom-center" />
       <BrowserRouter>
         <Header setVisible={setVisible} />
         <Sidebar
