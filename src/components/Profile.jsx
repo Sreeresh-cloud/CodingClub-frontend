@@ -77,7 +77,7 @@ export default function Profile() {
                         </button>
                     </div>
                     <div className="md:p-5 flex flex-row justify-center md:justify-start items-center md:items-end">
-                        <button type="button" className="text-white w-[70%] sm:w-44 bg-[#E5245A] hover-bg-[#E5244A] focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-4 py-2 text-center">Logout</button>
+                        <button onClick={handleLogout} type="button" className="text-white w-[70%] sm:w-44 bg-[#E5245A] hover-bg-[#E5244A] focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-4 py-2 text-center">Logout</button>
                     </div>
                 </div>
             </div>

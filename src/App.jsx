@@ -94,7 +94,7 @@ function App() {
           (userDetails!==null && token?.length > 0) ?
           <Link to='/profile' onClick={() => setVisible(false)}>Profile</Link>
           :
-          <Login/>
+          <Login setVisible={() => setVisible(false)}/>
           }
         </div>
         </Sidebar>

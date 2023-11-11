@@ -5,7 +5,7 @@ import { UserContext } from "../contexts/UserContext";
 import { useContext, useRef } from "react";
 import { Toast } from "primereact/toast";
 
-export default function Login() {
+export default function Login({setVisible}) {
   const { tokenState, userState } = useContext(UserContext);
   const [token, setToken] = tokenState;
   const [userDetails, setUserDetails] = userState;
@@ -19,13 +19,16 @@ export default function Login() {
         localStorage.setItem("CCUserToken",response.response.key);
         setUserDetails({...profile_response.response});
         showSuccess();
+        setVisible();
       }
       else {
         showError();
+        setVisible();
       }
     }
     else {
       showError();
+      setVisible();
     }
   };
 
@@ -34,6 +37,7 @@ export default function Login() {
     onError: (error) => {
       console.log("Login Failed:", error);
       showError();
+      setVisible();
     },
   });
 
