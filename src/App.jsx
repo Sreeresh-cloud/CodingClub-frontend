@@ -4,7 +4,7 @@ import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
 import { Sidebar } from "primereact/sidebar";
 import { useEffect, useState,useContext,useRef } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet, Navigate } from "react-router-dom";
 import Header from "./components/Header";
 import { Link } from "react-router-dom";
 import Footer from "./components/Footer";
@@ -23,6 +23,15 @@ import {Toast} from 'primereact/toast';
 import EditProfile from './components/EditProfile';
 
 function App() {
+
+  function RequireAuth() {
+    const token = localStorage.getItem('CCUserToken');
+    if (token?.length > 0)
+      return <Outlet />
+    else
+      return <Navigate to="/" element={<Home/>} exact />
+  
+  };
 
   const [visible, setVisible] = useState(false);
   const { tokenState, userState } = useContext(UserContext);
@@ -97,8 +106,10 @@ function App() {
           <Route path='/web' element={<Web/>} />
           <Route path='/resources' element={<Resources/>} />
           <Route path='/contacts' element={<Contacts/>} />
-          <Route path='/profile' element={<Profile/>} />
-          <Route path='edit_profile' element={<EditProfile/>}/>
+          <Route element={<RequireAuth/>}>
+            <Route path='/profile' element={<Profile/>} />
+            <Route path='edit_profile' element={<EditProfile/>}/>
+          </Route>
         </Routes>
         <Footer />
       </BrowserRouter>
