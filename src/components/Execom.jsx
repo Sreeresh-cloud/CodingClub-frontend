@@ -9,8 +9,9 @@ import Akshay from '../assets/images/img7.jpg'
 import Anand from '../assets/images/img8.jpg'
 import Sreehari from '../assets/images/img9.jpg'
 import Placeholder from '../assets/placeholder-image-execom.svg'
-import { Carousel } from 'primereact/carousel';
 import '../styles/execom.css';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const Execom = () => {
 
@@ -109,32 +110,10 @@ const Execom = () => {
 
     const [currentYear,setCurrentYear] = useState(2022);
 
-    const responsiveOptions = [
-        {
-          breakpoint: '640px',
-          numVisible: 2,
-          numScroll:1,
-        },
-        {
-            breakpoint: '1024px',
-            numVisible: 3,
-            numScroll: 1,
-        },
-        {
-            breakpoint: '2600px',
-            numVisible: 5,
-            numScroll: 1,
-        },
-    ];
+    const handleCarouselChange = (index) => {
+        setCurrentYear(items[index].title);
+    };
 
-    const itemTemplate = (item) => {
-        return(
-          <div className={`flex justify-center hover:text-[#E5245A] hover:cursor-pointer text-xl md:text-2xl font-bold underline-offset-8 decoration-4 ${item.title === currentYear ? "underline text-[#E5245A]":""}`}  
-            onClick={()=> setCurrentYear(item.title)}>
-            {item.title}
-          </div>
-        );
-    }
     const renderedCards = imgList.map(item => (
         <ExecomCard key={item.id} item={item}/>
     ));
@@ -145,9 +124,21 @@ const Execom = () => {
                 <div className="font-black text-4xl sm:text-6xl">EXECOM</div>
                 <div className="flex-auto border-b-4 mb-2 ml-2"></div>
             </div>
-            <div className="flex justify-center">
-                <Carousel value={items} numScroll={1} numVisible={5} responsiveOptions={responsiveOptions} itemTemplate={itemTemplate} className="w-full xl:w-[70%]"/>
-            </div>
+            <Carousel
+                showStatus={false}
+                showThumbs={false}
+                className="mr-16 ml-16 lg:mr-64 lg:ml-64"
+                onChange={handleCarouselChange}
+            >
+                {items.map((item, index) => (
+                <div
+                    key={index}
+                    className="p-8 bg-black text-white cursor-pointer"
+                >
+                    {item.title}
+                </div>
+                ))}
+            </Carousel>
             <div className="mb-16">
                 Current year: {currentYear}
             </div>

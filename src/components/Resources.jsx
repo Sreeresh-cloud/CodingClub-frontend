@@ -62,6 +62,7 @@ const Resources = () => {
       </div>
       <Carousel
         showStatus={false}
+        showThumbs={false}
         className="mr-16 ml-16 md:mr-64 md:ml-64"
         onChange={handleCarouselChange}
       >
