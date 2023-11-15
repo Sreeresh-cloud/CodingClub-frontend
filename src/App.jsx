@@ -21,6 +21,7 @@ import { UserContext } from "./contexts/UserContext";
 import Profile from "./components/Profile";
 import {Toast} from 'primereact/toast';
 import EditProfile from './components/EditProfile';
+import { ToastContext } from "./contexts/ToastContext";
 
 function App() {
 
@@ -66,9 +67,17 @@ function App() {
     toast.current.show({severity:'success', summary: 'Success', detail:'Login Successful', life: 3000});
   }
 
+  const showError = () => {
+    toast.current.show({severity:'error', summary: 'Error', detail:'Login Error', life: 3000});
+  }
+
   return (
     <div className="min-h-screen flex flex-col bg-black text-white font-source">
       <Toast ref={toast} position="bottom-center" />
+      <ToastContext.Provider value={{
+        showSuccess,
+        showError
+      }}>
       <BrowserRouter>
         <Header setVisible={setVisible} />
         <Sidebar
@@ -113,6 +122,7 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
+      </ToastContext.Provider>
     </div>
   );
 }
