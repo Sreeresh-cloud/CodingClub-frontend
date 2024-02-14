@@ -4,7 +4,7 @@ export async function userLogin(access_token) {
     try {
         const response = await axios({
             method: 'post',
-            url: 'https://backend.codingclubtkmce.tech/users/google/',
+            url: 'https://backend.codingclubtkm.tech/users/google/',
             headers: {"Content-Type": "application/json"},
             data: {
                 access_token,

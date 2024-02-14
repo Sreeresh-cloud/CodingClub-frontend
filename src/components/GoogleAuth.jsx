@@ -10,7 +10,7 @@ export default function Login({setVisible}) {
   const [token, setToken] = tokenState;
   const [userDetails, setUserDetails] = userState;
 
-  const {showSuccess,showError} = useContext(ToastContext);
+  const {showToast} = useContext(ToastContext);
 
   const handleLogin = async(credentaialResponse) => {
     const response = await userLogin(credentaialResponse.access_token);
@@ -20,16 +20,16 @@ export default function Login({setVisible}) {
       if(profile_response.status === 200) {
         localStorage.setItem("CCUserToken",response.response.key);
         setUserDetails({...profile_response.response});
-        showSuccess();
+        showToast('success','Success','Login Successful');
         setVisible && setVisible();
       }
       else {
-        showError();
+        showToast('error','Error','Login Error');
         setVisible && setVisible();
       }
     }
     else {
-      showError();
+      showToast('error','Error','Login Error');
       setVisible && setVisible();
     }
   };
@@ -38,7 +38,7 @@ export default function Login({setVisible}) {
     onSuccess: handleLogin,
     onError: (error) => {
       console.log("Login Failed:", error);
-      showError();
+      showToast('error','Error','Login Error');
       setVisible && setVisible();
     },
   });

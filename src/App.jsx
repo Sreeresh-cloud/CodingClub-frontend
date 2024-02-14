@@ -48,7 +48,7 @@ function App() {
           if(response.status === 200) {
             setUserDetails({...response.response});
             setToken(loggedInUserToken);
-            showSuccess();
+            showToast('success','Success','Login Successful');
           }
           else {
             localStorage.setItem('CCUserToken',"");
@@ -63,20 +63,14 @@ function App() {
 
   const toast = useRef(null);
 
-  const showSuccess = () => {
-    toast.current.show({severity:'success', summary: 'Success', detail:'Login Successful', life: 3000});
+  const showToast = (severity,summary,detail) => {
+    toast.current.show({severity: severity, summary: summary, detail: detail, life: 3000});
   }
-
-  const showError = () => {
-    toast.current.show({severity:'error', summary: 'Error', detail:'Login Error', life: 3000});
-  }
-
   return (
     <div className="min-h-screen flex flex-col bg-black text-white font-source">
       <Toast ref={toast} position="bottom-center" />
       <ToastContext.Provider value={{
-        showSuccess,
-        showError
+        showToast
       }}>
       <BrowserRouter>
         <Header setVisible={setVisible} />

@@ -4,6 +4,18 @@ import { Formik, Form, Field } from "formik";
 import { useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
 
+const branches = [
+  { slug: "B.Arch", label: "Architecture" },
+  { slug: "CH", label: "Chemical Engineering" },
+  { slug: "CE", label: "Civil Engineering" },
+  { slug: "CSE", label: "Computer Science & Engineering" },
+  { slug: "EC", label: "Electronics and Communication Engineering" },
+  { slug: "EEE", label: "Electrical & Electronics Engineering" },
+  { slug: "MCA", label: "Masters of Computer Application " },
+  { slug: "MECH", label: "Mechanical Engineering" },
+  { slug: "ER", label: "Electrical & Computer Science Engineering" }
+]
+
 const EditProfile = () => {
 
   const { userState, tokenState } = useContext(UserContext);
@@ -133,8 +145,24 @@ const EditProfile = () => {
                       className="w-full bg-gray-800 border border-gray-300 rounded-md p-2"
                       required={true}
                       id="admission_no"
+                      name="admission_no"
                       placeholder=""
                       type={"number"}
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <h3
+                      className="block text-lg font-bold text-gray-600"
+                    >
+                      Name:
+                    </h3>
+                    <Field
+                      className="w-full bg-gray-800 border border-gray-300 rounded-md p-2"
+                      required={true}
+                      id="name"
+                      name="name"
+                      placeholder="Name"
+                      type={"text"}
                     />
                   </div>
                   <div className="flex justify-end mt-6 mb-4">
