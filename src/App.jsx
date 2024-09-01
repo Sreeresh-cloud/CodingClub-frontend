@@ -11,7 +11,6 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Events from "./components/Events";
 import Execom from "./components/Execom";
-import Web from "./components/Web";
 import Resources from './components/Resources';
 import Contacts from './components/Contacts';
 import Login from "./components/GoogleAuth";
@@ -19,7 +18,6 @@ import { get_profile } from "./apis/user";
 import { UserContext } from "./contexts/UserContext";
 import Profile from "./components/Profile";
 import {Toast} from 'primereact/toast';
-import EditProfile from './components/EditProfile';
 import { ToastContext } from "./contexts/ToastContext";
 
 function App() {
@@ -101,7 +99,6 @@ function App() {
           <Route path='/' element={<Home/>} />
           <Route path='/events' element={<Events/>} />
           <Route path='/execom' element={<Execom/>} />
-          <Route path='/web' element={<Web/>} />
           <Route path='/resources' element={<Resources/>} />
           <Route path='/contacts' element={<Contacts/>} />
           <Route element={<RequireAuth/>}>
