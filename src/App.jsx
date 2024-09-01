@@ -88,7 +88,6 @@ function App() {
             
           <Link to='/resources' onClick={()=> setVisible(false)}>Resources</Link>
           <Link to='/execom' onClick={() => setVisible(false)}>Execom</Link>
-          <Link to='/web' onClick={()=> setVisible(false)}>Web</Link>
           <Link to='/contacts' onClick={()=> setVisible(false)}>Contact</Link>
           {
           (userDetails!==null && token?.length > 0) ?
