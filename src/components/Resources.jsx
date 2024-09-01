@@ -60,32 +60,9 @@ const Resources = () => {
         <div className="font-black text-4xl sm:text-6xl">RESOURCES</div>
         <div className="flex-auto border-b-4 mb-2 ml-2"></div>
       </div>
-      <Carousel
-        showStatus={false}
-        showThumbs={false}
-        className="mr-16 ml-16 md:mr-64 md:ml-64"
-        onChange={handleCarouselChange}
-      >
-        {items.map((item, index) => (
-          <div
-            key={index}
-            className="p-8 bg-black text-white cursor-pointer"
-          >
-            {item.section}
-          </div>
-        ))}
-      </Carousel>
+      
       <div className="flex flex-col gap-4">
-        {
-          renderedCards.length > 0 ? 
-          (
-            renderedCards
-          ) 
-          : 
-          (
-            <div className="text-center text-xl">No resources found</div>
-          )
-        }
+        YET TO BE UPDATED...
       </div>
     </div>
   );

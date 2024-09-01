@@ -24,7 +24,7 @@ const Contacts = () => {
             </div>
             <div className="phno  bg-[#E5245A] rounded-xl pt-6 col-start-2 row-start-3 col-span-1 row-span-2">
               <h3 className='text-xl md:text-2xl pt-2ns font-bold'>Phone Number</h3>
-              <p className='text-xs md:text-lg pt-1 font-montserrat'>+91 9061152964</p>
+              <p className='text-xs md:text-lg pt-1 font-montserrat'>+91 __________</p>
             </div>
             <div className="social bg-[#112EAF] rounded-xl col-start-1 row-start-5 col-span-2 row-span-1">
             <a href='https://instagram.com/codingclub_tkmce'><i className="pi pi-instagram p-5 hover:text-blue-950 transition-all duration-300 ease-out" style={{ fontSize: '1.5em' }}></i></a>

@@ -48,7 +48,7 @@ const Home = () => {
                     <p className='font-montserrat'>To create a platform to impart and instil this culture of learning-by-practice among students and professionals alike, and to that end, our team organizes a multitude of events throughout the year.</p>
                 </div>
             </div>
-            <div className='text-[0.6rem] px-7 text-center'>Illustrations by <a className='hover:underline underline-offset-4' href="https://storyset.com/" target='_blank'>Storyset</a></div>
+            <div className='text-[0.6rem] px-7 text-center'> <a className='hover:underline underline-offset-4' href="https://storyset.com/" target='_blank'></a></div>
         </div>
     );
 };

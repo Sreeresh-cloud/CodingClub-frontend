@@ -86,10 +86,7 @@ const Execom = () => {
         ]
     );
     const [items,setItems] = useState([
-        {
-            id:0,
-            title:2022
-        },
+        
         {
             id:1,
             title:2023
@@ -108,7 +105,7 @@ const Execom = () => {
         }
     ]);
 
-    const [currentYear,setCurrentYear] = useState(2022);
+    const [currentYear,setCurrentYear] = useState(2024);
 
     const handleCarouselChange = (index) => {
         setCurrentYear(items[index].title);
@@ -124,28 +121,12 @@ const Execom = () => {
                 <div className="font-black text-4xl sm:text-6xl">EXECOM</div>
                 <div className="flex-auto border-b-4 mb-2 ml-2"></div>
             </div>
-            <Carousel
-                showStatus={false}
-                showThumbs={false}
-                className="mr-16 ml-16 lg:mr-64 lg:ml-64"
-                onChange={handleCarouselChange}
-            >
-                {items.map((item, index) => (
-                <div
-                    key={index}
-                    className="p-8 bg-black text-white cursor-pointer"
-                >
-                    {item.title}
-                </div>
-                ))}
-            </Carousel>
+            
             <div className="mb-16">
                 Current year: {currentYear}
             </div>
             <div className="flex justify-center">
-                <div className="grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 w-full md:w-[85%] xl:w-[90%] 2xl:w-3/4 md:gap-y-16">
-                    {renderedCards}
-                </div>
+               Yet to be updated...
             </div>
         </div>
     );

@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Events from "./components/Events";
-import EventDescription from "./components/EventDescription";
 import Execom from "./components/Execom";
 import Web from "./components/Web";
 import Resources from './components/Resources';
@@ -86,9 +85,7 @@ function App() {
             <Link to="/events" onClick={() => setVisible(false)}>
               Events
             </Link>
-            <Link to="/eventdetails" onClick={() => setVisible(false)}>
-              Event Details
-            </Link>
+            
           <Link to='/resources' onClick={()=> setVisible(false)}>Resources</Link>
           <Link to='/execom' onClick={() => setVisible(false)}>Execom</Link>
           <Link to='/web' onClick={()=> setVisible(false)}>Web</Link>
@@ -104,7 +101,6 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/events' element={<Events/>} />
-          <Route path='/eventdetails' element={<EventDescription/>} />
           <Route path='/execom' element={<Execom/>} />
           <Route path='/web' element={<Web/>} />
           <Route path='/resources' element={<Resources/>} />
@@ -122,3 +118,5 @@ function App() {
 }
 
 export default App;
+
+
